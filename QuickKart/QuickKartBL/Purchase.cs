@@ -25,7 +25,7 @@ namespace QuickKartBL
 
         public double CalculateBillAmount(double p_price)
         {
-            double total = 0;
+            double total = this.quantityOrdered * p_price;
             return total;
         }
     }

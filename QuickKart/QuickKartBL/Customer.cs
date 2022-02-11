@@ -34,8 +34,29 @@ namespace QuickKartBL
 
         public double GetDiscount()
         {
-            double discount = 0;
-            return discount;
+            switch (this.customerType)
+            {
+                case "Privileged":
+                    return 2;
+
+                case "Regular":
+                    return 5;
+
+                case "Elite":
+                    return 7;
+
+                default:
+                    return 0;
+            }
         }
+
+        public int CalculateAge()
+        {
+            int age = 0;
+            age = Convert.ToInt32(DateTime.Now.Year - this.dateOfBirth.Year);
+            Console.WriteLine("Calculation completed successfully");
+            return age;
+        }
+
     }
 }

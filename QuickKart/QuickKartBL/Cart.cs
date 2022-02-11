@@ -8,21 +8,21 @@ namespace QuickKartBL
 {
     public class Cart
     {
-        string[] items;
+        readonly string[] Items;
         public Cart()
         {
-            items = new string[3];
-            items[0] = "Apple iPhone 6 Plus";
-            items[1] = "HTC One M9";
-            items[2] = "Microsoft Lumia 950";
+            Items = new string[3];
+            Items[0] = "Apple iPhone 6 Plus";
+            Items[1] = "HTC One M9";
+            Items[2] = "Microsoft Lumia 950";
         }
         public void DisplayItems()
         {
             int index = 0;
-            int numberOfItems = this.items.Length;
+            int numberOfItems = this.Items.Length;
             while (index < numberOfItems)
             {
-                Console.WriteLine(this.items[index]);
+                Console.WriteLine(this.Items[index]);
                 index += 1;
             }
         }

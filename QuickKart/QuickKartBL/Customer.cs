@@ -12,29 +12,32 @@ namespace QuickKartBL
         {
         }
 
-        public Customer(int p_customerId, string p_customerName, string p_address, DateTime p_dateOfBirth, string p_emailId, string p_gender, string p_password, string p_customerType)
+        public Customer(int p_customerId, string p_customerName, string p_address, DateTime p_dateOfBirth, string p_emailId, string p_gender, string p_password, string p_customerType, CustomerCardType p_cardType)
         {
-            this.customerId = p_customerId;
-            this.customerName = p_customerName;
-            this.address = p_address;
-            this.dateOfBirth = p_dateOfBirth;
-            this.emailId = p_emailId;
-            this.gender = p_gender;
-            this.password = p_password;
-            this.customerType = p_customerType;
+            this.CustomerId = p_customerId;
+            this.CustomerName = p_customerName;
+            this.Address = p_address;
+            this.DateOfBirth = p_dateOfBirth;
+            this.EmailId = p_emailId;
+            this.Gender = p_gender;
+            this.Password = p_password;
+            this.CustomerType = p_customerType;
+            this.CardType = p_cardType;
         }
-        public string address { get; set; }
-        public int customerId { get; set; }
-        public string customerName { get; set; }
-        public string customerType { get; set; }
-        public DateTime dateOfBirth { get; set; }
-        public string emailId { get; set; }
-        public string gender { get; set; }
-        public string password { get; set; }
+        public string Address { get; set; }
+        public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerType { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string EmailId { get; set; }
+        public string Gender { get; set; }
+        public string Password { get; set; }
+        public CustomerCardType CardType { get; set; }
+
 
         public double GetDiscount()
         {
-            switch (this.customerType)
+            switch (this.CustomerType)
             {
                 case "Privileged":
                     return 2;
@@ -52,8 +55,7 @@ namespace QuickKartBL
 
         public int CalculateAge()
         {
-            int age = 0;
-            age = Convert.ToInt32(DateTime.Now.Year - this.dateOfBirth.Year);
+            int age = Convert.ToInt32(DateTime.Now.Year - this.DateOfBirth.Year);
             Console.WriteLine("Calculation completed successfully");
             return age;
         }

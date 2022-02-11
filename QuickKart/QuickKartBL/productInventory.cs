@@ -1,13 +1,13 @@
 ﻿namespace QuickKartBL
 {
-    public class productInventory
+    public class ProductInventory
     {
-        public productInventory(int p_inventoryId, int p_quantityInHand)
+        public ProductInventory(int p_inventoryId, int p_quantityInHand)
         {
-            this.inventoryId = p_inventoryId;
-            this.quantityInHand = p_quantityInHand;
+            this.InventoryId = p_inventoryId;
+            this.QuantityInHand = p_quantityInHand;
         }
-        public int inventoryId { get; set; }
-        public int quantityInHand { get; set; }
+        public int InventoryId { get; set; }
+        public int QuantityInHand { get; set; }
     }
 }

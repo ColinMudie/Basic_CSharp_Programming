@@ -4,21 +4,21 @@
     {
         public Product(string p_productId, string p_productName, string p_description, double p_price, int p_quantityAvailable)
         {
-            this.productId = p_productId;
-            this.productName = p_productName;
-            this.description = p_description;
-            this.price = p_price;
-            this.quantityAvailable = p_quantityAvailable;
+            this.ProductId = p_productId;
+            this.ProductName = p_productName;
+            this.Description = p_description;
+            this.Price = p_price;
+            this.QuantityAvailable = p_quantityAvailable;
         }
-        public int quantityAvailable { get; set; }
-        public string description { get; set; }
-        public double price { get; set; }
-        public string productId { get; set; }
-        public string productName { get; set; }
+        public int QuantityAvailable { get; set; }
+        public string Description { get; set; }
+        public double Price { get; set; }
+        public string ProductId { get; set; }
+        public string ProductName { get; set; }
 
         public bool CheckAvailability(int quantityPurchased)
         {
-            return (quantityPurchased <= this.quantityAvailable);
+            return (quantityPurchased <= this.QuantityAvailable);
         }
     }
 }

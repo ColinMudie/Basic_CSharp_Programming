@@ -2,3 +2,6 @@ bin
 obj
 .vs
 .vscode
+Infosys.ruleset
+MSTrack.vsix
+TestResults

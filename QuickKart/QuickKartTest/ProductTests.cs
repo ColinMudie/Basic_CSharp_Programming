@@ -11,15 +11,15 @@ namespace QuickKartTest
         [TestMethod]
         public void PurchaseTest()
         {
-            Purchase _obj1 = new ("P101", 1, "112 Streets st.", DateTime.Now, "Credit Card");
-            Purchase _obj2 = new ("P102", 2, "113 Never st.", DateTime.Now, "Credit Card");
+            Purchase _obj1 = new ( 1, "112 Streets st.", DateTime.Now, "Credit Card");
+            Purchase _obj2 = new ( 2, "113 Never st.", DateTime.Now, "Credit Card");
             Assert.AreNotSame(_obj1, _obj2);
         }
 
         [TestMethod()]
         public void CheckAvailabilityTest()
         {
-            Purchase _target = new ("P101", 3, "112 Streets st.", DateTime.Now, "Credit Card");
+            Purchase _target = new ( 3, "112 Streets st.", DateTime.Now, "Credit Card");
             
             // Test 1
             double actual = _target.CalculateBillAmount(2690.0, 3);

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickKartTestApp", "QuickKa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickKartBL", "QuickKartBL\QuickKartBL.csproj", "{984DDC88-6DFE-44F4-8E15-FC8562B01C5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickKartTest", "QuickKartTest\QuickKartTest.csproj", "{0587E695-F464-4865-AB46-F42C4A2AC3FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickKartTest", "QuickKartTest\QuickKartTest.csproj", "{0587E695-F464-4865-AB46-F42C4A2AC3FF}"
 	ProjectSection(ProjectDependencies) = postProject
 		{984DDC88-6DFE-44F4-8E15-FC8562B01C5E} = {984DDC88-6DFE-44F4-8E15-FC8562B01C5E}
 	EndProjectSection

@@ -8,13 +8,14 @@ namespace QuickKartBL
 {
     public class Customer
     {
-        public Customer()
+        static Customer()
         {
+            currentValueForCustomerId = 1000;
         }
 
-        public Customer(int p_customerId, string p_customerName, string p_address, DateTime p_dateOfBirth, string p_emailId, string p_gender, string p_password, string p_customerType, CustomerCardType p_cardType)
+        public Customer(string p_customerName, string p_address, DateTime p_dateOfBirth, string p_emailId, string p_gender, string p_password, string p_customerType, CustomerCardType p_cardType)
         {
-            this.CustomerId = p_customerId;
+            this.CustomerId = ++currentValueForCustomerId;
             this.CustomerName = p_customerName;
             this.Address = p_address;
             this.DateOfBirth = p_dateOfBirth;
@@ -24,6 +25,7 @@ namespace QuickKartBL
             this.CustomerType = p_customerType;
             this.CardType = p_cardType;
         }
+        private static int currentValueForCustomerId;
         public string Address { get; set; }
         public int CustomerId { get; set; }
         public string CustomerName { get; set; }
@@ -33,6 +35,7 @@ namespace QuickKartBL
         public string Gender { get; set; }
         public string Password { get; set; }
         public CustomerCardType CardType { get; set; }
+        public long[] CustomerContact { get; set; }
 
 
         public double GetDiscount()
@@ -59,6 +62,10 @@ namespace QuickKartBL
             Console.WriteLine("Calculation completed successfully");
             return age;
         }
-
+        public void AddContactDetails(string emailId, params long[] customerContact)
+        {
+            this.EmailId = emailId;
+            this.CustomerContact = customerContact;
+        }
     }
 }

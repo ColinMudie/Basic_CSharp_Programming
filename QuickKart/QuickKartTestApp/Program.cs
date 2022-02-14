@@ -13,7 +13,7 @@ namespace QuickKartTestApp
             Cart shoppingCart = new Cart();
             shoppingCart.DisplayItems();
 
-            Customer custObj = new Customer(101, "Peter", "Street 5, Old Woodside Drive, New York",
+            Customer custObj = new Customer("Peter", "Street 5, Old Woodside Drive, New York",
                                             new DateTime(1990, 11, 09), "peter@gmail.com", "Male", "Peter@123", "Privileged", CustomerCardType.Platinum);
             Console.WriteLine("Hi " + custObj.CustomerName + ", your age is " + custObj.CalculateAge());
 
